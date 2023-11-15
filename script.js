@@ -1,4 +1,4 @@
-]// Initialise an empty array with the variable name todoItems
+// Initialise an empty array with the variable name todoItems
 
 
 // Function to add a todo to the list
