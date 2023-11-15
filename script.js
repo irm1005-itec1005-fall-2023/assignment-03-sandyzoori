@@ -1,52 +1,4 @@
-/* Assignment 03: Starting a Todo List App
- *
- /* You are going to build the brains of a simple Todo List application
- * in JavaScript. You don't have to worry about the look of the app for now.
- * We will make it look awesome in Assignment 04.
- *
- /* For now, we'll focus on giving the application the following features:
- /* 1. Add a new todo item
- * 2. Delete a todo item
- /* 3. Mark a todo item as completed
- * 4. Delete a todo item
- * 5. Clear all completed todos
- *
- * The following code is the starting point for this assignment.
- *
- * You will have to write the code to initialise the todoItems array and
- * for the functions below.
- *
- * 1. addToDoItem(text)
- * 2. removeToDoItem(todoId)
- * 3. markToDoItemAsCompleted(todoId)
- * 4. deleteToDoItem(todoId)
- * 5. clearCompletedTasks()
- *
- * YOU MUST NOT CHANGE ANY OF THE FUNCTION NAMES OR THE AUTOMATED TESTS WILL FAIL
- *
- * As you write each function, press on the "Run Tests" button in the browser
- * to run the automated tests and check your work.
- *
- * You can also add your own tests and debug statements at the bottom of this file.
- *
- */
-
-
-
-
-// Data storage - Initialize the array of To Do items
-//
-// NOTE:
-//
-// You must use the following object literal structure when creating new todo items
-// {
-//   id: 0,
-//   text: "This is a todo item",
-//   completed: false,
-// }
-
-
-// Initialise an empty array with the variable name todoItems
+]// Initialise an empty array with the variable name todoItems
 
 
 // Function to add a todo to the list
@@ -55,16 +7,16 @@
 // the function does not need to return anything
 // Initialize an empty todoList array
 let todoItems = [];
+let count=0;
 
 
 function addToDoItem(text) {
   let todoItem = {
-    id: todoItems.length,
+    id: count,
     text: text,
     completed: false
   };
-
-
+ count= count +1;
   todoItems.push(todoItem);
   console.log("Added:", todoItem);
 }
@@ -105,6 +57,18 @@ function markToDoItemAsCompleted(todoID) {
 // true or false depending on whether the item was successfully deleted
 
 
+function removeToDoItem(todoId){
+  if (typeof todoId !== "number") {
+    console.log("Please enter a number");
+
+
+   
+
+
+    return false;
+  }
+  deleteToDoItem(todoId);
+}
 // Function to delete a task from the array
 
 
@@ -166,3 +130,5 @@ deleteToDoItem(0);
 //  console.log(todoItems); // This should show the todo item you added
 //  removeToDoItem(0); // This should remove the todo item with ID 0 from the array
 //  markToDoItemAsCompleted(0); // This should mark the todo item with ID 0 as completed
+
+
